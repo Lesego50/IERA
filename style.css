@@ -1,0 +1,369 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Header and Navbar */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2e7d32; /* Green color for solar */
+    display: flex;
+    align-items: center;
+}
+
+nav .logo .material-icons {
+    margin-right: 0.5rem;
+    color: #ffb300; /* Yellow/Orange for sun */
+}nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;}
+
+nav ul li a .material-icons {
+    margin-right: 0.3rem;
+    font-size: 1.2rem; /* Adjust icon size */
+}
+
+nav ul li a:hover {
+    color: #2e7d32;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #e8f5e9; /* Light green background */
+    color: #1b5e20;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Contain placeholder if needed */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative; /* Keep text above potential background image */
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffb300; /* Button color */
+    color: #333;    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffa000;
+}
+
+.hero-image-placeholder,
+.about-image-placeholder,
+.training-image-placeholder {
+    display: block; /* Or inline-block if preferred */
+    max-width: 80%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 2rem auto 0; /* Center and add space */
+    background-color: #ccc; /* Placeholder background */
+    border: 1px dashed #999;
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-style: italic;
+    min-height: 150px; /* Minimum height */
+}
+
+/* General Section Styling */
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #2e7d32;
+    font-weight: 700;
+}
+
+/* About Section */
+#about {
+    background-color: #ffffff;
+}
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.about-image-placeholder {
+    flex-basis: 40%; /* Adjust image width */
+    max-width: 40%;
+    margin: 0; /* Reset margin */
+}
+.about-content p {
+     flex-basis: 60%;
+}
+
+
+/* Services Section */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.card .card-icon {
+    font-size: 3rem;
+    color: #ffb300;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #1b5e20;
+}
+
+/* Training Section */
+#training {     background-color: #e8f5e9; /* Light green background */
+}
+.training-content {
+     display: flex;
+     align-items: flex-start; /* Align items to the top */
+     gap: 2rem;
+}
+.training-image-placeholder {
+     flex-basis: 40%;     max-width: 40%;
+     margin: 0;
+}
+.training-content > div, /* Target the text content area */
+.training-content > ul,
+.training-content > p {
+     flex-basis: 60%;
+}
+
+#training ul {
+    list-style: none;    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+#training ul li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+#training ul li .list-icon {
+     color: #2e7d32;
+     margin-right: 0.5rem;
+     font-size: 1.1rem;
+}
+
+/* Location Section */
+#location {
+    background-color: #ffffff;
+}address {
+    font-style: normal;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* Contact Section */
+#contact ul {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#contact ul li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items in the list */
+}
+#contact ul li .material-icons{
+    margin-right: 0.5rem;
+    color: #2e7d32;
+}
+
+#contact a {
+    color: #1b5e20;
+    text-decoration: none;
+}
+#contact a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 1rem auto 0;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+.contact-form h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1b5e20;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;}
+.contact-form button {
+    display: block;
+    width: 100%;    padding: 0.8rem;
+    background-color: #2e7d32;    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+    background-color: #1b5e20;
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        margin-top: 1rem;        flex-direction: column;
+        width: 100%;
+    }
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        text-align: left;
+    }
+     nav ul li a{
+         padding: 0.5rem 0; /* Add padding for easier tapping */
+     }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 3rem 1rem;
+    }
+
+    .about-content, .training-content {
+        flex-direction: column;
+    }
+     .about-image-placeholder, .training-image-placeholder {
+        max-width: 80%; /* Allow image to take more width on smaller screens */
+        margin: 0 auto 1.5rem auto; /* Center image when stacked */
+        flex-basis: auto; /* Reset basis */
+     }
+     .about-content p, .training-content > div, .training-content > ul, .training-content > p {
+        flex-basis: auto; /* Reset basis */
+     }
+}
